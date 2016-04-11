@@ -1,6 +1,5 @@
 var gulp = require("gulp"),
 	gulpLoadPlugins = require('gulp-load-plugins'),
-    del = require("del"),
     Browsersync = require('browser-sync').create(),
     reload = Browsersync.reload;
 var concat = require("gulp-concat");
