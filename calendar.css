@@ -255,8 +255,8 @@ body {
 }
 @font-face {
   font-family: "icon-yuan";
-  src: url("./fonts/icomoon.eot");
-  src: url("./fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("./fonts/icomoon.woff") format("woff"), url("./fonts/icomoon.ttf") format("truetype"), url("./fonts/icomoon.svg") format("svg");
+  src: url("./icomoon.eot");
+  src: url("./icomoon.eot?#iefix") format("embedded-opentype"), url("./icomoon.woff") format("woff"), url("./icomoon.ttf") format("truetype"), url("./icomoon.svg") format("svg");
 }
 .icon {
   font-family: icon-yuan !important;
