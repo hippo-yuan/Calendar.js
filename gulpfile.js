@@ -24,7 +24,7 @@ gulp.task("clean", function() {
 });
 gulp.task("build-css", function() {
 	return gulp.src(["./lib/styles/css/reset.css", "./lib/styles/css/base.css", "./lib/styles/css/index.css"])
-			   .pipe($.concat("canlendar.css"))
+			   .pipe($.concat("calendar.css"))
 			   .pipe($.autoprefixer())
 			   .pipe(gulp.dest("./build"));
 })
