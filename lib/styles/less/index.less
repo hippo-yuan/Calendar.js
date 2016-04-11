@@ -1,0 +1,363 @@
+@import "mixin.less";
+html {
+  height: 100%;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  & > div {
+    height: 100%;
+  }
+  .aside {
+    color: #ffffff;
+    width: 35%;
+    padding: 15px 20px;
+  }
+  .main {
+    width: 65%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.timeNow {
+  text-align: center;
+  font-size: @fontSize;
+  span:first-child {
+    margin-right: 10px;
+  }
+}
+.operator {
+  position: relative;
+  .goPrev {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .goNext {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  i {
+    color: @fontActiveColor;
+    line-height: 2.2rem;
+    cursor: pointer;
+    &:hover {
+      color: @currentBg;
+    }
+  }
+}
+.dateContain {
+  position: relative;
+  .bigTime {
+    text-align: center;
+    font-family: arial;
+    font-size: 10rem;
+    span {
+      text-shadow: 2px 2px 1px rgba(0,0,0,.1);
+    }
+  }
+  .noliDate > p{
+    font-size: @fontSize;
+    text-align: center;
+  }
+  .goodBad {
+    border-top: 2px solid #94c9ff;
+    padding: 10px 7px;
+    & > div {
+      i {
+        font-style: normal;
+        text-shadow: 2px 2px 1px rgba(0,0,0,.1);
+        text-align: center;
+        color: #fff;
+        font-size: 1.1rem;
+      }
+      span {
+        font-size: 0.7rem;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+.aside {
+  background: @asideBgColor;
+  background: @asideLinear;
+}
+.operator {
+  height: 2.2rem;
+  border-bottom: 2px solid #D2456A;
+}
+.datePicker {
+  height: calc(~"100% - 4.4rem");
+  overflow: hidden;
+}
+.dateUl {
+  height: 100%;
+  position: relative;
+  .dateLi {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+}
+.dayThead,
+.dayTbody,
+.dayTr {
+  display: flex;
+  flex-wrap: wrap;
+}
+.dayTbody {
+  height: calc(~"100% - 40px");
+  .dayTr {
+    width: 100%;
+    border-top: 1px solid @borderColor;
+    height: calc(~"100% / 6");
+    .dayTd {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: calc(100% / 7);
+      .almanac {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      span {
+        &.dayNumber {
+          font-family: arial;
+          color: #000;
+          font-size: 1.2rem;
+        }
+      }
+      span.almanac {
+        color: #616161;
+        font-size: 0.7rem;
+      }
+      &.date-reset {
+        span:first-child {
+          color: @fontActiveColor !important;
+        }
+      }
+      &.date-holiday {
+        span:last-child {
+          color: @fontActiveColor !important;
+        }
+      }
+      &.date-prev,
+      &.date-next {
+        span:first-child,
+        span:last-child {
+          color: @fontDisbaled !important;
+        }
+      }
+      &.date-selected {
+        background-color: @selectedBg;
+        span:first-child,
+        span:last-child {
+          color: #fff !important;
+        }
+      }
+      &.date-current {
+        background-color: @currentBg;
+        span:first-child,
+        span:last-child {
+          color: #ffffff !important;
+        }
+      }
+    }
+  }
+}
+.prev-month-html {
+  transform: translate3d(-100%, 0, 0);
+}
+.current-month-html {
+  transform: translate3d(0, 0, 0);
+}
+.next-month-html {
+  transform: translate3d(100%, 0, 0);
+}
+.dayThead {
+  height: 40px;
+  .dayTd {
+    line-height: 40px;
+    border: none;
+    color: @fontTitleColor;
+    &.active {
+      color: @fontActiveColor;
+    }
+  }
+}
+.dayTbody {
+  .dayTd {
+    &:hover {
+      box-shadow: inset 0px 0px 4px #47D5FF;
+    }
+  }
+}
+.dayTd {
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  .currentDay {
+    background-color: @currentBg;
+  }
+  .restDay {
+    background-color: @resetBg;
+  }
+}
+.pannel {
+  position: fixed;
+  width: 100%;
+  top: 30%;
+  left: 0px;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  background-color: rgba(227, 36, 85, 0.86);
+  color: #ffffff;
+  opacity: 0;
+  display: none;
+  transition: opacity 300ms;
+}
+@media only screen and(max-width: 700px) {
+  .container {
+    flex-direction: column;
+    .aside {
+      width: 100%;
+      height: 30%;
+      padding: 5px;
+    }
+    .main {
+      width: 100%;
+      height: 70%;
+    }
+  }
+  .bigTime {
+    line-height: 1;
+    font-size: 5.3rem !important;
+  }
+  .operator {
+    display: none;
+  }
+  .datePicker {
+    height: calc(~"100% - 10px");
+  }
+  .noliDate {
+    display: flex;
+    justify-content: center;
+    p {
+      margin: 0 10px;
+    }
+  }
+  .goodBad {
+    display: none;
+  }
+}
+.dateUlContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.yearChoose,
+.monthChoose,
+.returnToday {
+  display: inline-block;
+  font-size: 0.7rem;
+  margin-right: 10%;
+}
+.returnToday {
+  background-color: @buttonDefaultBg;
+  border: 1px solid #999;
+  padding: 2px 10px;
+  cursor: default;
+}
+.timeChoose {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 20px;
+}
+.chooseContainer {
+  position: relative;
+  font-size: 0.7rem;
+  color: #333;
+  .buttonGroup {
+    border: 1px solid #999;
+    border-bottom-color: #d8d8d8;
+    border-right-color: #d8d8d8;
+    padding-left: 5px;
+    line-height: 1;
+    span {
+      display: inline-block;
+      &.yearTime,
+      &.monthTime {
+        margin: 0px 8px;
+      }
+      &.pullDown {
+        width: 1.2rem;
+        line-height: 1.2rem;
+        cursor: default;
+        text-align: center;
+        border-left: 1px solid #d8d8d8;
+        background-color: @buttonDefaultBg;
+      }
+    }
+  }
+  .pullSelect {
+    &.open {
+      display: block;
+    }
+    display: none;
+    width: 100%;
+    position: absolute;
+    z-index: 20;
+    height: 432px;
+    border: 1px solid #bbb;
+    background: #fff;
+    overflow-y: scroll;
+    ul {
+      background-color: #fff;
+      list-style: none;
+      li {
+        padding: 5px 10px;
+        &:hover {
+          cursor: default;
+          background-color: @buttonDefaultBg;
+        }
+      }
+    }
+  }
+}
+.buttonGroup.open~.pullSelect{
+  display: block;
+}
+//响应式大小计算
+@media only screen and (min-width: 700px) {
+  html {
+    font-size: 21.33333333px !important;
+  }
+  .dateContain {
+    .bigTime {
+      font-size: 9rem;
+    }
+  }
+}
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 21.6px !important;
+  }
+  .dateContain {
+    .bigTime {
+      font-size: 9rem;
+    }
+  }
+}
+@media only screen and (min-width: 998px) {
+  html {
+    font-size: 25.6px !important;
+  }
+}

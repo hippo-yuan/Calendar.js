@@ -1,0 +1,25 @@
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+@font-face {
+  font-family: "icon-yuan";
+  src: url("./fonts/icomoon.eot");
+  src: url("./fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("./fonts/icomoon.woff") format("woff"), url("./fonts/icomoon.ttf") format("truetype"), url("./fonts/icomoon.svg") format("svg");
+}
+.icon {
+  font-family: icon-yuan !important;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: -2px;
+}
+.icon-left:after {
+  content: '\f053';
+}
+.icon-right:after {
+  content: '\f054';
+}

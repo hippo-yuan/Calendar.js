@@ -1,0 +1,387 @@
+html {
+  height: 100%;
+}
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  height: 100%;
+}
+.container > div {
+  height: 100%;
+}
+.container .aside {
+  color: #ffffff;
+  width: 35%;
+  padding: 15px 20px;
+}
+.container .main {
+  width: 65%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.timeNow {
+  text-align: center;
+  font-size: 0.85rem;
+}
+.timeNow span:first-child {
+  margin-right: 10px;
+}
+.operator {
+  position: relative;
+}
+.operator .goPrev {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.operator .goNext {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.operator i {
+  color: #e02d2d;
+  line-height: 2.2rem;
+  cursor: pointer;
+}
+.operator i:hover {
+  color: #fb0;
+}
+.dateContain {
+  position: relative;
+}
+.dateContain .bigTime {
+  text-align: center;
+  font-family: arial;
+  font-size: 10rem;
+}
+.dateContain .bigTime span {
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.dateContain .noliDate > p {
+  font-size: 0.85rem;
+  text-align: center;
+}
+.dateContain .goodBad {
+  border-top: 2px solid #94c9ff;
+  padding: 10px 7px;
+}
+.dateContain .goodBad > div i {
+  font-style: normal;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.dateContain .goodBad > div span {
+  font-size: 0.7rem;
+  margin-left: 8px;
+}
+.aside {
+  background: #D2456A;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#D2456A), to(#e42355));
+}
+.operator {
+  height: 2.2rem;
+  border-bottom: 2px solid #D2456A;
+}
+.datePicker {
+  height: calc(100% - 4.4rem);
+  overflow: hidden;
+}
+.dateUl {
+  height: 100%;
+  position: relative;
+}
+.dateUl .dateLi {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.dayThead,
+.dayTbody,
+.dayTr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.dayTbody {
+  height: calc(100% - 40px);
+}
+.dayTbody .dayTr {
+  width: 100%;
+  border-top: 1px solid #c8cacc;
+  height: calc(100% / 6);
+}
+.dayTbody .dayTr .dayTd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: calc(14.28571429%);
+}
+.dayTbody .dayTr .dayTd .almanac {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dayTbody .dayTr .dayTd span.dayNumber {
+  font-family: arial;
+  color: #000;
+  font-size: 1.2rem;
+}
+.dayTbody .dayTr .dayTd span.almanac {
+  color: #616161;
+  font-size: 0.7rem;
+}
+.dayTbody .dayTr .dayTd.date-reset span:first-child {
+  color: #e02d2d !important;
+}
+.dayTbody .dayTr .dayTd.date-holiday span:last-child {
+  color: #e02d2d !important;
+}
+.dayTbody .dayTr .dayTd.date-prev span:first-child,
+.dayTbody .dayTr .dayTd.date-next span:first-child,
+.dayTbody .dayTr .dayTd.date-prev span:last-child,
+.dayTbody .dayTr .dayTd.date-next span:last-child {
+  color: #bfbfbf !important;
+}
+.dayTbody .dayTr .dayTd.date-selected {
+  background-color: #47D5FF;
+}
+.dayTbody .dayTr .dayTd.date-selected span:first-child,
+.dayTbody .dayTr .dayTd.date-selected span:last-child {
+  color: #fff !important;
+}
+.dayTbody .dayTr .dayTd.date-current {
+  background-color: #fb0;
+}
+.dayTbody .dayTr .dayTd.date-current span:first-child,
+.dayTbody .dayTr .dayTd.date-current span:last-child {
+  color: #ffffff !important;
+}
+.prev-month-html {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+}
+.current-month-html {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.next-month-html {
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+.dayThead {
+  height: 40px;
+}
+.dayThead .dayTd {
+  line-height: 40px;
+  border: none;
+  color: #2c9bb3;
+}
+.dayThead .dayTd.active {
+  color: #e02d2d;
+}
+.dayTbody .dayTd:hover {
+  box-shadow: inset 0px 0px 4px #47D5FF;
+}
+.dayTd {
+  height: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+.dayTd .currentDay {
+  background-color: #fb0;
+}
+.dayTd .restDay {
+  background-color: #fff0f0;
+}
+.pannel {
+  position: fixed;
+  width: 100%;
+  top: 30%;
+  left: 0px;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  background-color: rgba(227, 36, 85, 0.86);
+  color: #ffffff;
+  opacity: 0;
+  display: none;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .aside {
+    width: 100%;
+    height: 30%;
+    padding: 5px;
+  }
+  .container .main {
+    width: 100%;
+    height: 70%;
+  }
+  .bigTime {
+    line-height: 1;
+    font-size: 5.3rem !important;
+  }
+  .operator {
+    display: none;
+  }
+  .datePicker {
+    height: calc(100% - 10px);
+  }
+  .noliDate {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .noliDate p {
+    margin: 0 10px;
+  }
+  .goodBad {
+    display: none;
+  }
+}
+.dateUlContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.yearChoose,
+.monthChoose,
+.returnToday {
+  display: inline-block;
+  font-size: 0.7rem;
+  margin-right: 10%;
+}
+.returnToday {
+  background-color: #f2f2f2;
+  border: 1px solid #999;
+  padding: 2px 10px;
+  cursor: default;
+}
+.timeChoose {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem 20px;
+}
+.chooseContainer {
+  position: relative;
+  font-size: 0.7rem;
+  color: #333;
+}
+.chooseContainer .buttonGroup {
+  border: 1px solid #999;
+  border-bottom-color: #d8d8d8;
+  border-right-color: #d8d8d8;
+  padding-left: 5px;
+  line-height: 1;
+}
+.chooseContainer .buttonGroup span {
+  display: inline-block;
+}
+.chooseContainer .buttonGroup span.yearTime,
+.chooseContainer .buttonGroup span.monthTime {
+  margin: 0px 8px;
+}
+.chooseContainer .buttonGroup span.pullDown {
+  width: 1.2rem;
+  line-height: 1.2rem;
+  cursor: default;
+  text-align: center;
+  border-left: 1px solid #d8d8d8;
+  background-color: #f2f2f2;
+}
+.chooseContainer .pullSelect {
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+  height: 432px;
+  border: 1px solid #bbb;
+  background: #fff;
+  overflow-y: scroll;
+}
+.chooseContainer .pullSelect.open {
+  display: block;
+}
+.chooseContainer .pullSelect ul {
+  background-color: #fff;
+  list-style: none;
+}
+.chooseContainer .pullSelect ul li {
+  padding: 5px 10px;
+}
+.chooseContainer .pullSelect ul li:hover {
+  cursor: default;
+  background-color: #f2f2f2;
+}
+.buttonGroup.open ~ .pullSelect {
+  display: block;
+}
+@media only screen and (min-width: 700px) {
+  html {
+    font-size: 21.33333333px !important;
+  }
+  .dateContain .bigTime {
+    font-size: 9rem;
+  }
+}
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 21.6px !important;
+  }
+  .dateContain .bigTime {
+    font-size: 9rem;
+  }
+}
+@media only screen and (min-width: 998px) {
+  html {
+    font-size: 25.6px !important;
+  }
+}

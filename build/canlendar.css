@@ -1,0 +1,660 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-size: 20px;
+  /*不用10px 62.5% 因为chrome只支持12px最小*/
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #3d4145;
+  line-height: 1.5;
+  /*字体反锯齿*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+}
+body,
+dl,
+dd,
+ul,
+ol,
+p,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+thead,
+tbody,
+tfoot,
+th,
+td,
+input,
+textarea,
+fieldset,
+legend,
+optgroup,
+blockquote,
+figure,
+menu {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+a,
+input,
+textarea,
+select,
+button {
+  outline: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+.button:active {
+  color: #0a8ddf;
+  border-color: #0a8ddf;
+}
+p {
+  margin: 1em 0;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+@font-face {
+  font-family: "icon-yuan";
+  src: url("./fonts/icomoon.eot");
+  src: url("./fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("./fonts/icomoon.woff") format("woff"), url("./fonts/icomoon.ttf") format("truetype"), url("./fonts/icomoon.svg") format("svg");
+}
+.icon {
+  font-family: icon-yuan !important;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: -2px;
+}
+.icon-left:after {
+  content: '\f053';
+}
+.icon-right:after {
+  content: '\f054';
+}
+
+html {
+  height: 100%;
+}
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  height: 100%;
+}
+.container > div {
+  height: 100%;
+}
+.container .aside {
+  color: #ffffff;
+  width: 35%;
+  padding: 15px 20px;
+}
+.container .main {
+  width: 65%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.timeNow {
+  text-align: center;
+  font-size: 0.85rem;
+}
+.timeNow span:first-child {
+  margin-right: 10px;
+}
+.operator {
+  position: relative;
+}
+.operator .goPrev {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.operator .goNext {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.operator i {
+  color: #e02d2d;
+  line-height: 2.2rem;
+  cursor: pointer;
+}
+.operator i:hover {
+  color: #fb0;
+}
+.dateContain {
+  position: relative;
+}
+.dateContain .bigTime {
+  text-align: center;
+  font-family: arial;
+  font-size: 10rem;
+}
+.dateContain .bigTime span {
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.dateContain .noliDate > p {
+  font-size: 0.85rem;
+  text-align: center;
+}
+.dateContain .goodBad {
+  border-top: 2px solid #94c9ff;
+  padding: 10px 7px;
+}
+.dateContain .goodBad > div i {
+  font-style: normal;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.dateContain .goodBad > div span {
+  font-size: 0.7rem;
+  margin-left: 8px;
+}
+.aside {
+  background: #D2456A;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#D2456A), to(#e42355));
+}
+.operator {
+  height: 2.2rem;
+  border-bottom: 2px solid #D2456A;
+}
+.datePicker {
+  height: calc(100% - 4.4rem);
+  overflow: hidden;
+}
+.dateUl {
+  height: 100%;
+  position: relative;
+}
+.dateUl .dateLi {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.dayThead,
+.dayTbody,
+.dayTr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.dayTbody {
+  height: calc(100% - 40px);
+}
+.dayTbody .dayTr {
+  width: 100%;
+  border-top: 1px solid #c8cacc;
+  height: calc(100% / 6);
+}
+.dayTbody .dayTr .dayTd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: calc(14.28571429%);
+}
+.dayTbody .dayTr .dayTd .almanac {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dayTbody .dayTr .dayTd span.dayNumber {
+  font-family: arial;
+  color: #000;
+  font-size: 1.2rem;
+}
+.dayTbody .dayTr .dayTd span.almanac {
+  color: #616161;
+  font-size: 0.7rem;
+}
+.dayTbody .dayTr .dayTd.date-reset span:first-child {
+  color: #e02d2d !important;
+}
+.dayTbody .dayTr .dayTd.date-holiday span:last-child {
+  color: #e02d2d !important;
+}
+.dayTbody .dayTr .dayTd.date-prev span:first-child,
+.dayTbody .dayTr .dayTd.date-next span:first-child,
+.dayTbody .dayTr .dayTd.date-prev span:last-child,
+.dayTbody .dayTr .dayTd.date-next span:last-child {
+  color: #bfbfbf !important;
+}
+.dayTbody .dayTr .dayTd.date-selected {
+  background-color: #47D5FF;
+}
+.dayTbody .dayTr .dayTd.date-selected span:first-child,
+.dayTbody .dayTr .dayTd.date-selected span:last-child {
+  color: #fff !important;
+}
+.dayTbody .dayTr .dayTd.date-current {
+  background-color: #fb0;
+}
+.dayTbody .dayTr .dayTd.date-current span:first-child,
+.dayTbody .dayTr .dayTd.date-current span:last-child {
+  color: #ffffff !important;
+}
+.prev-month-html {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+}
+.current-month-html {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.next-month-html {
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+.dayThead {
+  height: 40px;
+}
+.dayThead .dayTd {
+  line-height: 40px;
+  border: none;
+  color: #2c9bb3;
+}
+.dayThead .dayTd.active {
+  color: #e02d2d;
+}
+.dayTbody .dayTd:hover {
+  box-shadow: inset 0px 0px 4px #47D5FF;
+}
+.dayTd {
+  height: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+.dayTd .currentDay {
+  background-color: #fb0;
+}
+.dayTd .restDay {
+  background-color: #fff0f0;
+}
+.pannel {
+  position: fixed;
+  width: 100%;
+  top: 30%;
+  left: 0px;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  background-color: rgba(227, 36, 85, 0.86);
+  color: #ffffff;
+  opacity: 0;
+  display: none;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .aside {
+    width: 100%;
+    height: 30%;
+    padding: 5px;
+  }
+  .container .main {
+    width: 100%;
+    height: 70%;
+  }
+  .bigTime {
+    line-height: 1;
+    font-size: 5.3rem !important;
+  }
+  .operator {
+    display: none;
+  }
+  .datePicker {
+    height: calc(100% - 10px);
+  }
+  .noliDate {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .noliDate p {
+    margin: 0 10px;
+  }
+  .goodBad {
+    display: none;
+  }
+}
+.dateUlContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.yearChoose,
+.monthChoose,
+.returnToday {
+  display: inline-block;
+  font-size: 0.7rem;
+  margin-right: 10%;
+}
+.returnToday {
+  background-color: #f2f2f2;
+  border: 1px solid #999;
+  padding: 2px 10px;
+  cursor: default;
+}
+.timeChoose {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem 20px;
+}
+.chooseContainer {
+  position: relative;
+  font-size: 0.7rem;
+  color: #333;
+}
+.chooseContainer .buttonGroup {
+  border: 1px solid #999;
+  border-bottom-color: #d8d8d8;
+  border-right-color: #d8d8d8;
+  padding-left: 5px;
+  line-height: 1;
+}
+.chooseContainer .buttonGroup span {
+  display: inline-block;
+}
+.chooseContainer .buttonGroup span.yearTime,
+.chooseContainer .buttonGroup span.monthTime {
+  margin: 0px 8px;
+}
+.chooseContainer .buttonGroup span.pullDown {
+  width: 1.2rem;
+  line-height: 1.2rem;
+  cursor: default;
+  text-align: center;
+  border-left: 1px solid #d8d8d8;
+  background-color: #f2f2f2;
+}
+.chooseContainer .pullSelect {
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+  height: 432px;
+  border: 1px solid #bbb;
+  background: #fff;
+  overflow-y: scroll;
+}
+.chooseContainer .pullSelect.open {
+  display: block;
+}
+.chooseContainer .pullSelect ul {
+  background-color: #fff;
+  list-style: none;
+}
+.chooseContainer .pullSelect ul li {
+  padding: 5px 10px;
+}
+.chooseContainer .pullSelect ul li:hover {
+  cursor: default;
+  background-color: #f2f2f2;
+}
+.buttonGroup.open ~ .pullSelect {
+  display: block;
+}
+@media only screen and (min-width: 700px) {
+  html {
+    font-size: 21.33333333px !important;
+  }
+  .dateContain .bigTime {
+    font-size: 9rem;
+  }
+}
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 21.6px !important;
+  }
+  .dateContain .bigTime {
+    font-size: 9rem;
+  }
+}
+@media only screen and (min-width: 998px) {
+  html {
+    font-size: 25.6px !important;
+  }
+}
